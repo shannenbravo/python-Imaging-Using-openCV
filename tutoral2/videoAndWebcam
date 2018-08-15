@@ -1,0 +1,24 @@
+import cv2
+import numpy as np
+
+# define videocapture
+
+cap = cv2.VideoCapture(0)  # 0 is the first webcam on the computer
+
+while True:
+    ret, frame = cap.read()  # take the frame from the camera
+    grayScale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    cv2.imshow("Video Cam", frame)  # show the frame being captured
+    cv2.imshow("Gray Scale", grayScalew)
+
+    key = cv2.waitKey(1)  # wait 1 mill sec
+
+    if key == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+
+
+
