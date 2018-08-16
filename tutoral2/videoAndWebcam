@@ -10,7 +10,7 @@ while True:
     grayScale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     cv2.imshow("Video Cam", frame)  # show the frame being captured
-    cv2.imshow("Gray Scale", grayScalew)
+    cv2.imshow("Gray Scale", grayScale)
 
     key = cv2.waitKey(1)  # wait 1 mill sec
 

@@ -1,0 +1,16 @@
+import cv2
+import numpy as np
+
+cap = cv2.VideoCapture("red_panda_snow.mp4") # uplaoding a video
+
+while True:
+    ret, frame = cap.read()
+    flippedFrame = cv2.flip(frame, 0) # flipping the frame
+    cv2.imshow("flipped", flippedFrame)
+    cv2.imshow("Playing in snow", frame)
+    key = cv2.waitKey(30)
+    if key == 27:
+        break
+
+cap.realase()
+cv2.destroyAllWindows()
